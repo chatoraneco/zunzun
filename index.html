@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./images/ずんだ.png">
+    <title>Chatoraneco:Zunda</title>
+    <link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./libs/bootstrap/carousel.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/custom.css"> <!-- CSSファイルをリンク -->
+</head>
+<body>
+
+    <!-- Header(Start) -->
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./images/New Piskel.gif">Chatoraneco:Zunda
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#targetCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="targetCollapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#my_portfolio">Zunda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#my_about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#my_contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header(End) -->
+
+    <!-- Main(Start) -->
+    <main>
+
+        <div class="text-center" id="my_key">
+            <div class="container" id="my_key_in">
+                <img src="./images/New Piskel.gif">
+                <h1>Chatoraneco</h1>
+                <h4>--------★--------</h4>
+                <h5>Student</h5>
+                <h5>言語: HTML/CSS/JavaScript</h5>
+            </div>
+        </div>
+
+        <div class="container" id="my_portfolio">
+            <br><br>
+            <h2>Zunda</h2>
+            <h5>--------★--------</h5>
+            <br>
+            <div class="row d-flex align-items-stretch">
+                <div class="row justify-content-center">
+                    <div class="card" style="max-width: 25rem;">
+                        <img id="zundaGif" class="card-img-top" src="./images/でかずんだ.gif" alt="Zunda">
+                        <div class="card-body">
+                            <h4 class="card-title">ずんだもん</h4>
+                            <p class="card-text">なの</p>
+                            <a href="#" class="btn btn-primary">だ！</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+        </div>
+
+        <div class="container-fluid" id="my_about">
+            <br><br>
+            <h2 style="text-align: center;">About</h2>
+            <h5 style="text-align: center;">--------★--------</h5>
+            <br>
+            <div style="text-align: center;">
+                <div>ずんだもち美味しいらしいのだ</div>
+                <br>
+				<div id="visitorCount">あなたは◯◯人目のお客様なのだ</div>
+				<br>
+                <h6>※タップで移動できます※</h6>
+                <br>
+                <img class="zundaImage" id="zundaImage1" src="./images/ずんだ.png">
+                <img class="zundaImage" id="zundaImage2" src="./images/ずんだ.png">
+                <img class="zundaImage" id="zundaImage3" src="./images/ずんだ.png">
+                <br>
+            </div>
+            <br><br>
+        </div>
+
+        <div class="container" id="my_contact" style="text-align: center;">
+            <br><br>
+            <h2>Contact</h2>
+            <h5>--------★--------</h5>
+            <br>
+            <a>
+                <i class="bi bi-envelope-fill"></i>
+                <i class="bi bi-github"></i>
+                <i class="bi bi-twitter"></i>
+            </a>
+        </div>
+
+    </main>
+    <!-- Main(End) -->
+
+    <!-- Footer(Start) -->
+    <footer>
+        <div class="container text-muted py-5">
+            <p class="float-end mb-1"><a href="#">Back to top</a></p>
+            <p class="mb-1">&copy; Bootstrap</p>
+            <p class="mb-0">
+                <a href="https://getbootstrap.jp" target="_blank">Bootstrap公式サイト</a>や
+                <a href="https://getbootstrap.jp/docs/5.0/getting-started/introduction/" target="_blank">スタートガイド</a>、
+                <a href="https://icons.getbootstrap.com/" target="_blank">アイコン</a>を活用しましょう。
+            </p>
+        </div>
+    </footer>
+    <!-- Footer(End) -->
+
+    <!-- JavaScript -->
+    <script src="./libs/jquery/jquery-3.6.1.min.js"></script>
+    <script src="./libs/bootstrap/popper.min.js"></script>
+    <script src="./libs/bootstrap/bootstrap.min.js"></script>
+    <script src="./main.js"></script>
+    <script>
+        let scale = 1; // 拡大率の初期値
+        const maxScale = 2; // 最大拡大率の設定
+
+        document.querySelector('.btn.btn-primary').addEventListener('click', function(event) {
+            event.preventDefault(); // リンクのデフォルト動作を防ぐ
+
+            if (scale >= maxScale) {
+                scale = 1; // 最大サイズに達したら元に戻す
+            } else {
+                scale += 0.1; // クリックするたびに拡大率を増加
+            }
+
+            const gif = document.getElementById('zundaGif');
+            gif.style.transform = `scale(${scale})`; // GIFを拡大または元に戻す
+            gif.style.transition = 'transform 0.2s'; // アニメーション効果
+        });
+
+        const zundas = [
+            { element: document.getElementById('zundaImage1'), speed: 2 },
+            { element: document.getElementById('zundaImage2'), speed: 2.4 },
+            { element: document.getElementById('zundaImage3'), speed: 3 },
+        ];
+
+        function randomizePosition(zunda) {
+            const myAbout = document.getElementById('my_about');
+            const newX = Math.random() * (myAbout.clientWidth - 50);
+            const newY = Math.random() * (myAbout.clientHeight - 50);
+            zunda.element.style.position = 'absolute'; // 位置を絶対に設定
+            zunda.element.style.left = newX + 'px';
+            zunda.element.style.top = newY + 'px';
+            return { posX: newX, posY: newY };
+        }
+
+        zundas.forEach(zunda => {
+            let posX = Math.random() * (document.getElementById('my_about').clientWidth - 50);
+            let posY = Math.random() * (document.getElementById('my_about').clientHeight - 50);
+            let velocityX = zunda.speed;
+            let velocityY = zunda.speed;
+
+            zunda.element.addEventListener('click', () => {
+                const newPosition = randomizePosition(zunda);
+                posX = newPosition.posX;
+                posY = newPosition.posY;
+            });
+
+            function moveZunda() {
+                posX += velocityX;
+                posY += velocityY;
+
+                if (posX + 50 >= document.getElementById('my_about').clientWidth || posX < 0) {
+                    velocityX *= -1; // X方向の反転
+                }
+                if (posY + 50 >= document.getElementById('my_about').clientHeight || posY < 0) {
+                    velocityY *= -1; // Y方向の反転
+                }
+
+                zunda.element.style.left = posX + 'px';
+                zunda.element.style.top = posY + 'px';
+
+                zundas.forEach(otherZunda => {
+                    if (otherZunda !== zunda) {
+                        const otherPosX = parseFloat(otherZunda.element.style.left);
+                        const otherPosY = parseFloat(otherZunda.element.style.top);
+
+                        if (
+                            posX < otherPosX + 50 &&
+                            posX + 50 > otherPosX &&
+                            posY < otherPosY + 50 &&
+                            posY + 50 > otherPosY
+                        ) {
+                            velocityX *= 1.5;
+                            velocityY *= 1.5;
+
+                            setTimeout(() => {
+                                velocityX /= 1.5;
+                                velocityY /= 1.5;
+                            }, 500);
+                        }
+                    }
+                });
+
+                requestAnimationFrame(moveZunda);
+            }
+
+            zunda.element.style.position = 'absolute'; // 位置を絶対に設定
+            zunda.element.style.left = posX + 'px';
+            zunda.element.style.top = posY + 'px';
+            moveZunda();
+        });
+    </script>
+	<script>
+		// localStorageから訪問者数を取得
+		let count = localStorage.getItem('visitorCount');
+	
+		// 初回訪問時の処理
+		if (!count) {
+			count = 1; // 初めての訪問者
+		} else {
+			count = parseInt(count) + 1; // カウントを増加
+		}
+	
+		// localStorageに新しいカウントを保存
+		localStorage.setItem('visitorCount', count);
+	
+		// 訪問者数を表示
+		document.getElementById('visitorCount').innerText = `あなたは${count}人目のお客様なのだ`;
+	</script>
+    
+</body>
+</html>

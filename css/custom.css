@@ -1,0 +1,99 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+}
+
+.navbar-brand img {
+    width: 28px;
+    height: auto;
+    margin: 0px 5px;
+    padding: 0px;
+    border-radius: 14px;
+}
+
+nav {
+    background-color: green;
+}
+
+#my_key {
+    width: 100%;
+    height: auto;
+    padding: 12rem 0px;
+    background-image: url("../images/でかずんだ.gif");
+    background-color: greenyellow; /* 背景色は必要なら残してください */
+    background-position: center;
+    background-size: cover; /* 画像をセクションにフィット */
+    background-repeat: no-repeat; /* 画像を繰り返さない */
+    color: orange;
+}
+
+#my_key_in {
+    width: 50%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.7); /* 半透明の白色 */
+}
+
+#my_key img {
+    width: 180px;
+    height: auto;
+    margin: 1rem 0px;
+    filter: drop-shadow(0 0 2.0rem rgba(0, 255, 179, 0.255));
+}
+
+#my_key h1 {
+    margin: 1rem 0px;
+    font-size: 3rem;
+}
+
+#my_portfolio {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: antiquewhite;
+    color: green;
+}
+
+#my_about {
+    width: 100%;
+    background-color: greenyellow;
+    color: green;
+    position: relative; /* 画像の絶対位置の基準 */
+    height: 300px; /* 高さを設定 */
+    overflow: hidden; /* はみ出た部分を隠す */
+}
+
+#my_contact {
+    width: 100%;
+    height: auto;
+    background-color: antiquewhite;
+}
+
+#my_contact i {
+    padding: 0.2rem;
+    font-size: 2rem;
+}
+
+.card {
+    height: 100%;
+}
+
+.zundaImage {
+    position: absolute;
+    width: 50px;
+    height: auto; 
+}
+
+#rearrangeAllBtn {
+    background-color: #28a745; /* 緑色 */
+    color: white; /* テキストの色を白に */
+    border: none; /* ボーダーをなしに */
+    padding: 10px 20px; /* パディングを追加 */
+    cursor: pointer; /* カーソルをポインターに */
+    border-radius: 5px; /* 角を丸くする */
+    transition: background-color 0.3s; /* ホバー時の背景色変更をスムーズに */
+}
+
+#rearrangeAllBtn:hover {
+    background-color: #218838; /* ホバー時の色 */
+}
